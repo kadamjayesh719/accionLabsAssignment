@@ -1,0 +1,37 @@
+    <div style="">
+    <h1 style="margin-left: 43%;">Accion Labs User Details</h1>
+    <md-input-container class="md-icon-float md-block">
+        <md-button style="margin-left: 85%" type="submit" class="md-primary md-raised" ng-click="addNewData()"> Add New</md-button>
+    </md-input-container>
+
+    <table datatable="ng">
+    <thead>
+    <tr>
+        <th style="width: 5%">ID</th>
+        <th style="width: 30%">Name</th>
+        <th style="width: 20%">Age (in years)</th>
+        <th style="width: 20%">Role</th>
+        <th style="width: 10%">Is Active</th>
+        <th style="width: 15%">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="width: 33%; text-align: center;" ng-repeat="item in data">
+        <td style="width: 10%">{{item.id}}</td>
+        <td style="width: 30%">{{item.name}}</td>
+        <td style="width: 20%">{{getAge(item.date_of_birth)}}</td>
+        <td style="width: 25%">{{item.role}}</td>
+        <td ng-class="{red:item.is_active!= true , green:item.is_active== true}" style="width: 20%">{{item.is_active==1?'TRUE':'FALSE'}}</td>
+        <td style="width: 15%">
+            <i ng-click="updateData($event,item)" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            <!-- <md-button ng-click="showDialog()" class="md-raised md-warn">
+              Employee Alert!
+              </md-button> -->
+            <i ng-click="deleteData($event,item.id)" class="fa fa-trash-o" aria-hidden="true"></i>
+        </td>
+    </tr>
+
+    </tbody>
+    </table>
+
+    </div>

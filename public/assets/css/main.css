@@ -1,0 +1,64 @@
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 75%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color:#dddddd ;
+        
+        }
+
+        tr:hover{
+            background-color:#87d37c;
+            color:#fff;
+        }
+
+        thead{
+            background-color:#44235d;
+            color:#fff;
+        }
+
+        .md-dialog-content {
+          max-width: 300px;
+        }
+
+        md-dialog.md-transition-in, md-dialog.md-transition-out {
+            width: 70% !important;
+            height: 47% !important;
+        }
+
+        .dataTables_wrapper .dataTables_info {
+            float: right !important;
+        }
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+            color: #191414 !important;
+            border: none;
+            background: #3f51b5 !important  ;
+        }
+
+        .dataTables_wrapper {
+            /* border: 1px solid #DDDDDD; */
+            padding: 1rem 0;
+            width: 80%;
+            margin-left: 10%;
+            border: 1px solid #040404;
+            background: white;
+        }
+
+        .red{
+            color: red;
+        }
+
+        .green{
+            color: green;
+        }
+

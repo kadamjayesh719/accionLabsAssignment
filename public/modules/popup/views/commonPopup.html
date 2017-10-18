@@ -1,0 +1,48 @@
+<div  layout="column" style="height: 100%;width: 100%;">
+
+  <br/>
+
+  <form name="userForm">
+	  <md-content sty>
+	    <md-input-container class="md-icon-float md-block">
+	      <!-- Use floating label instead of placeholder -->
+	      <label>Name</label>
+	      <input name='username' ng-model="userData.name" ng-pattern="/^[a-zA-Z\s]*$/" type="text" ng-disabled="!isAdding" required>
+	      <span style="color: red" ng-show="userForm.username.$touched && userForm.username.$invalid">*Name is required & should only contains text.</span>
+	    </md-input-container>
+
+	    <md-input-container class="md-icon-float md-block">
+	      <!-- Use floating label instead of placeholder -->
+	      <label>Date Of Birth</label>
+		    <!-- <md-datepicker ng-model="userData.date_of_birth" required></md-datepicker> -->
+		    <datepicker date-format="yyyy-MM-dd" date-max-limit="2017-10-18">
+			  <input  ng-model="userData.date_of_birth"type="text"/>
+			</datepicker>
+	    </md-input-container>
+
+	    <md-input-container class="md-icon-float md-block">
+	      <!-- Use floating label instead of placeholder -->
+	      <label>Role</label>	
+	      <input name="role" ng-pattern="/^[a-zA-Z\s]*$/" ng-model="userData.role" type="text" ng-required="true">
+	      <span style="color: red" ng-show="userForm.role.$touched && userForm.role.$invalid">Role is required & should only contain text.</span>
+	    </md-input-container>
+
+	    <md-input-container class="md-icon-float md-block">
+	      <!-- Use floating label instead of placeholder -->
+	      <label>Is Active</label>
+	      <br/>
+		    <md-switch ng-model="userData.is_active" aria-label="Switch 1">
+			    {{ userData.is_active}}
+			</md-switch>
+	    </md-input-container>
+	    </form>
+
+	    <md-input-container class="md-icon-float md-block">
+	    	<md-button class="md-warn md-raised" ng-click="closeDialog()"> close</md-button>
+	    	<md-button ng-disabled="userForm.$invalid" type="submit" class="md-primary md-raised" ng-click="addData(userData,isAdding)"> Submit</md-button>
+	    </md-input-container>
+	  </md-content>		
+
+	
+
+</div>

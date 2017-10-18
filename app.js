@@ -34,3 +34,4 @@ app.delete('/deleterecord', users.deleteRecord);
 app.put('/updaterecord', users.updateRecord);
 
 app.listen(4000);
+console.log('app listening on http://localhost:4000');

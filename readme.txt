@@ -1,4 +1,4 @@
-Develoing Environment(required)
+Developing Environment(required)
 	Angular JS v1.5.x
 	Node JS  v7.10.1
 	Express JS v4.16.2
